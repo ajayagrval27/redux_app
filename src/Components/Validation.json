@@ -1,0 +1,80 @@
+[
+	{
+		"name": "firstName",
+		"conditions": [
+			{
+				"condition": "userObj.firstName == 'undefined' || userObj.firstName == ''",
+				"error": "First name is required"
+			},
+			{
+				"condition": "!/^[A-Z a-z]+$/.test(userObj.firstName)",
+				"error": "First name should contain only alphabets"
+			}
+		]
+	},
+	{
+		"name": "lastName",
+		"conditions": [
+			{
+				"condition": "userObj.lastName == 'undefined' || userObj.lastName == ''",
+				"error": "Last name is required"
+			},
+			{
+				"condition": "!/^[A-Z a-z]+$/.test(userObj.lastName)",
+				"error": "Last name should contain only alphabets"
+			}
+		]
+	},
+	{
+		"name": "age",
+		"conditions": [
+			{
+				"condition": "userObj.age == 'undefined' || userObj.age == ''",
+				"error": "Age is required"
+			},
+			{
+				"condition": "!/^[0-9]+$/.test(userObj.age)",
+				"error": "Age should contain only numbers"
+			},
+			{
+				"condition": "userObj.age < 18",
+				"error": "Age should be greater than 18"
+			}
+		]
+	},
+	{
+		"name": "city",
+		"conditions": [
+			{
+				"condition": "userObj.city == 'undefined' || userObj.city == ''",
+				"error": "City is required"
+			},
+			{
+				"condition": "!/^[A-Z a-z]+$/.test(userObj.city)",
+				"error": "City should contain only alphabets"
+			}
+		]
+	},
+	{
+		"name": "gender",
+		"conditions": [
+			{
+				"condition": "userObj.gender == 'undefined' || userObj.gender == ''",
+				"error": "Gender is required"
+			}
+		]
+	},
+	{
+		"name": "hobbies",
+		"conditions": [
+			{
+				"condition": "userObj.hobbies == 'undefined' || userObj.hobbies == ''",
+				"error": "Hobbies is required"
+			},
+			{
+				"condition": "userObj.hobbies.length < 2",
+				"error": "Hobbies should be more than 2"
+			}
+		]
+	}
+]
